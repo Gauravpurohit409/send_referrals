@@ -6,4 +6,4 @@
 
 # Steps to execute in local
 * bundle install
-* rails s
+* rails server
