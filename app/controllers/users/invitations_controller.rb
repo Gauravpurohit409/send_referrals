@@ -3,7 +3,6 @@ class Users::InvitationsController < Devise::InvitationsController
     # GET /api/users/invitation/accept?invitation_token=
     def edit
         user = User.find_by_invitation_token(params[:invitation_token], true)
-        byebug
         if user
             redirect_to "http://localhost:3000/api/users?invitation_token=#{params[:invitation_token]}&email=#{user.email}"
         else
